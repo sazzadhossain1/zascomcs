@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Paris",
+    "listings": "25,690 Listing Available.",
+    "image": "/assets/img/image/citie-1.png"
+  },
+  {
+    "id": "2",
+    "name": "Rome",
+    "listings": "18,420 Listing Available.",
+    "image": "/assets/img/image/citie-2.png"
+  },
+  {
+    "id": "3",
+    "name": "Bruges",
+    "listings": "12,150 Listing Available.",
+    "image": "/assets/img/image/citie-3.png"
+  },
+  {
+    "id": "4",
+    "name": "Amsterdam",
+    "listings": "21,800 Listing Available.",
+    "image": "/assets/img/image/citie-4.png"
+  }
+]

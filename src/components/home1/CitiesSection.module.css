@@ -1,0 +1,234 @@
+/* =====================================
+   ZASCOMCS - BECOME A MEMBER SECTION
+===================================== */
+
+.memberSection {
+  width: 100%;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Heading stays centered */
+.memberSection :global(.hadding2) {
+  text-align: center;
+}
+
+.memberSection :global(.hadding2 h1) {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================================
+   CONTENT WRAPPER
+===================================== */
+
+.contentWrapper {
+  width: 100%;
+  max-width: 1050px;
+  margin: 45px auto 0;
+}
+
+.contentCard {
+  width: 100%;
+  background: #f8fbff;
+  border: 1px solid #e4edf8;
+  border-radius: 20px;
+  padding: 50px 55px;
+  box-shadow: 0 12px 35px rgba(32, 44, 74, 0.05);
+}
+
+/* =====================================
+   BANGLA DESCRIPTION
+===================================== */
+
+.description {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.description p {
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 2;
+  color: #202c4a;
+  text-align: justify;
+  margin: 0 0 24px;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================
+   REGISTRATION AREA
+===================================== */
+
+.registrationArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  margin-top: 40px;
+  padding-top: 35px;
+
+  border-top: 1px solid #dce7f5;
+}
+
+.registrationText {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.8;
+  color: #202c4a;
+  margin-bottom: 22px;
+}
+
+/* Registration Button */
+.registerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 15px 30px;
+  min-height: 52px;
+
+  background: #0263e0;
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.registerButton:hover {
+  background: #0054c7;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(2, 99, 224, 0.22);
+}
+
+.registerButton span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Registration URL */
+.registrationLink {
+  display: block;
+  max-width: 100%;
+
+  margin-top: 18px;
+
+  color: #0263e0;
+  font-size: 14px;
+
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.registrationLink:hover {
+  color: #202c4a;
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+  .contentWrapper {
+    margin-top: 35px;
+  }
+
+  .contentCard {
+    padding: 40px 35px;
+    border-radius: 16px;
+  }
+
+  .description p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .registrationText {
+    font-size: 17px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 575px) {
+  .contentWrapper {
+    margin-top: 28px;
+  }
+
+  .contentCard {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .description p {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .registrationArea {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  .registrationText {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .registerButton {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .registrationLink {
+    font-size: 12px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 375px) {
+  .contentCard {
+    padding: 24px 15px;
+  }
+
+  .description p {
+    font-size: 15px;
+  }
+
+  .registerButton {
+    font-size: 15px;
+  }
+}

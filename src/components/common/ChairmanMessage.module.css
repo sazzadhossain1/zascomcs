@@ -1,0 +1,292 @@
+.section {
+  width: 100%;
+  padding: 75px 20px 100px;
+  background: #dce7f5;
+  font-family: inherit;
+  /* margin-top: 50px; */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 55px;
+  margin-top: 70px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #0263e0;
+  margin-bottom: 14px;
+}
+
+.intro h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.25;
+  font-weight: 800;
+  color: #202c4a;
+  margin: 0;
+}
+
+.line {
+  width: 75px;
+  height: 4px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0263e0, #2f80ed);
+  margin: 20px auto 0;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: 55px;
+  align-items: start;
+}
+
+.photoColumn {
+  position: sticky;
+  top: 110px;
+  min-width: 0;
+}
+
+.photoFrame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f5f8fc;
+  border: 1px solid #e5ecf5;
+  box-shadow: 0 18px 45px rgba(32, 44, 74, 0.1);
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.photoFrame:hover .photo {
+  transform: scale(1.025);
+}
+
+.identity {
+  margin-top: 22px;
+  padding: 24px 18px;
+  text-align: center;
+  background: #f4f8ff;
+  border-radius: 14px;
+  border-bottom: 3px solid #0263e0;
+}
+
+.identity h3 {
+  margin: 0 0 8px;
+  color: #202c4a;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.identity span {
+  display: block;
+  color: #0263e0;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.identity p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #52627d;
+}
+
+.message {
+  min-width: 0;
+  position: relative;
+  padding: 40px 42px;
+  background: #ffffff;
+  border: 1px solid #e4ebf5;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(32, 44, 74, 0.06);
+}
+
+.quoteMark {
+  color: #0263e0;
+  font-family: Georgia, serif;
+  font-size: 90px;
+  line-height: 0.7;
+  opacity: 0.22;
+  margin-bottom: 20px;
+}
+
+.message p {
+  margin: 0 0 22px;
+  color: #485771;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.95;
+  text-align: left;
+}
+
+.message .greeting {
+  color: #202c4a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.highlight {
+  padding: 22px 26px;
+  margin: 30px 0;
+  background: linear-gradient(135deg, #202c4a, #131a2e);
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.6;
+  border-left: 4px solid #2f80ed;
+  border-radius: 10px;
+}
+
+.signature {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid #e4ebf5;
+}
+
+.signature p {
+  margin-bottom: 15px;
+  color: #52627d;
+}
+
+.signature h3 {
+  color: #202c4a;
+  font-size: 23px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.signature strong {
+  display: block;
+  font-size: 15px;
+  color: #0263e0;
+  margin-bottom: 6px;
+}
+
+.signature span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #52627d;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .section {
+    padding: 55px 18px 75px;
+  }
+
+  .profile {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .photoColumn {
+    top: 90px;
+  }
+
+  .message {
+    padding: 30px 25px;
+  }
+
+  .message p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .section {
+    padding: 45px 15px 65px;
+  }
+
+  .intro {
+    margin-bottom: 35px;
+  }
+
+  .intro h2 {
+    font-size: 29px;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .photoColumn {
+    position: static;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .photoFrame {
+    border-radius: 14px;
+  }
+
+  .identity {
+    margin-top: 15px;
+    padding: 20px 15px;
+  }
+
+  .identity h3 {
+    font-size: 21px;
+  }
+
+  .message {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .message p {
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .message .greeting {
+    font-size: 16px;
+  }
+
+  .highlight {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .signature h3 {
+    font-size: 21px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .message {
+    padding: 24px 16px;
+  }
+
+  .intro h2 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,412 @@
+/* ========================================
+   ZASCO MCS MEMBERSHIP BENEFITS
+   BLUE / NAVY / WHITE THEME
+======================================== */
+
+.benefitsSection {
+  width: 100%;
+  background: #f5f8ff;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================
+   LANGUAGE SECTION
+======================================== */
+
+.languageSection {
+  width: 100%;
+}
+
+.banglaSection {
+  margin-top: 85px;
+  padding-top: 75px;
+  border-top: 1px solid #dce8f8;
+}
+
+/* ========================================
+   ORIGINAL TITLE DESIGN
+   KEEP GREEN BRUSH UNCHANGED
+======================================== */
+
+.sectionHeading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeading h1 {
+  text-align: center;
+  color: #202c4a;
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+/*
+  IMPORTANT:
+  Original .after class is preserved.
+  No background/color override is applied.
+*/
+
+/* ========================================
+   BENEFITS GRID
+======================================== */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* ========================================
+   BENEFIT CARD
+======================================== */
+
+.benefitCard {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 225px;
+  padding: 35px 25px;
+
+  background: #ffffff;
+  border: 1px solid #dce8f8;
+  border-radius: 18px;
+
+  text-align: center;
+  overflow: hidden;
+
+  box-shadow: 0 8px 28px rgba(32, 44, 74, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Decorative circle */
+.benefitCard::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: -65px;
+  right: -65px;
+
+  border-radius: 50%;
+  background: rgba(2, 99, 224, 0.06);
+
+  pointer-events: none;
+}
+
+/* Hover */
+.benefitCard:hover {
+  transform: translateY(-7px);
+
+  background: #edf5ff;
+  border-color: #9dc6ff;
+
+  box-shadow: 0 18px 40px rgba(2, 99, 224, 0.12);
+}
+
+/* ========================================
+   ICON BOX
+======================================== */
+
+.iconWrapper {
+  position: relative;
+  z-index: 1;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf3ff;
+  color: #0263e0;
+
+  border-radius: 18px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 6px 20px rgba(2, 99, 224, 0.07);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.iconWrapper i {
+  font-size: 28px;
+  line-height: 1;
+  color: inherit;
+  display: inline-block;
+}
+
+.benefitCard:hover .iconWrapper {
+  background: #0263e0;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* ========================================
+   CARD TITLE
+======================================== */
+
+.benefitTitle {
+  position: relative;
+  z-index: 1;
+
+  color: #202c4a;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  text-align: center;
+  margin: 0;
+
+  overflow-wrap: break-word;
+}
+
+/* ========================================
+   BOTTOM ACCENT
+======================================== */
+
+.cardDecoration {
+  position: absolute;
+
+  width: 70px;
+  height: 4px;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #0263e0;
+  border-radius: 5px 5px 0 0;
+
+  transition: width 0.3s ease;
+}
+
+.benefitCard:hover .cardDecoration {
+  width: 110px;
+}
+
+/* ========================================
+   MOTTO
+======================================== */
+
+.motto {
+  width: 100%;
+  max-width: 950px;
+
+  margin: 45px auto 0;
+  padding: 30px 35px;
+
+  background: linear-gradient(135deg, #202c4a 0%, #151e35 100%);
+
+  border-left: 4px solid #0263e0;
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 30px rgba(32, 44, 74, 0.12);
+}
+
+.motto p {
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.8;
+
+  text-align: center;
+  margin: 0;
+}
+
+/* ========================================
+   BANGLA TYPOGRAPHY
+======================================== */
+
+.banglaSection .sectionHeading h1 {
+  line-height: 1.7;
+}
+
+.banglaSection .benefitTitle {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.banglaSection .motto p {
+  font-size: 21px;
+  line-height: 1.9;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+  .benefitsSection {
+    padding: 70px 0;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .sectionHeading {
+    margin-bottom: 45px;
+  }
+
+  .benefitCard {
+    min-height: 210px;
+    padding: 30px 20px;
+  }
+
+  .benefitTitle {
+    font-size: 19px;
+  }
+
+  .banglaSection {
+    margin-top: 65px;
+    padding-top: 60px;
+  }
+
+  .motto {
+    padding: 25px 30px;
+  }
+
+  .motto p {
+    font-size: 19px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 575px) {
+  .benefitsSection {
+    padding: 55px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 35px;
+  }
+
+  .sectionHeading h1 {
+    font-size: 27px;
+    line-height: 1.45;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefitCard {
+    min-height: 175px;
+    padding: 28px 20px;
+
+    border-radius: 14px;
+  }
+
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 18px;
+    border-radius: 15px;
+  }
+
+  .iconWrapper i {
+    font-size: 25px;
+  }
+
+  .benefitTitle {
+    font-size: 18px;
+  }
+
+  .banglaSection {
+    margin-top: 50px;
+    padding-top: 50px;
+  }
+
+  .banglaSection .sectionHeading h1 {
+    font-size: 26px;
+  }
+
+  .banglaSection .benefitTitle {
+    font-size: 20px;
+  }
+
+  .motto {
+    margin-top: 30px;
+    padding: 25px 20px;
+  }
+
+  .motto p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .banglaSection .motto p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 375px) {
+  .sectionHeading h1 {
+    font-size: 24px;
+  }
+
+  .banglaSection .sectionHeading h1 {
+    font-size: 23px;
+  }
+
+  .benefitCard {
+    min-height: 165px;
+  }
+
+  .benefitTitle {
+    font-size: 17px;
+  }
+
+  .motto p {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .benefitCard,
+  .iconWrapper,
+  .cardDecoration {
+    transition: none;
+  }
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "title": "Starter Plan",
+    "price": "$29",
+    "period": "/month",
+    "description": "Perfect for individuals and small agents listing select properties.",
+    "features": [
+      "Up to 10 active listings",
+      "Standard search indexing",
+      "Email and chat support",
+      "Basic lead analytics",
+      "Mobile-friendly showcase"
+    ],
+    "isPopular": false
+  },
+  {
+    "id": "2",
+    "title": "Professional Plan",
+    "price": "$79",
+    "period": "/month",
+    "description": "Ideal for established real estate agencies and growing brokerages.",
+    "features": [
+      "Up to 50 active listings",
+      "Priority top-tier search placement",
+      "24/7 dedicated support",
+      "Advanced conversion analytics",
+      "Custom branded virtual tours",
+      "Direct CRM webhook sync"
+    ],
+    "isPopular": true
+  },
+  {
+    "id": "3",
+    "title": "Enterprise Plan",
+    "price": "$199",
+    "period": "/month",
+    "description": "Complete multi-region management suite for international real estate firms.",
+    "features": [
+      "Unlimited active listings",
+      "Featured homepage placement",
+      "Dedicated account manager",
+      "Multi-agent team seats (up to 20)",
+      "API access & custom feeds",
+      "Custom contract templates"
+    ],
+    "isPopular": false
+  }
+]

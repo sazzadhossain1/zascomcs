@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Property Management",
+    "description": "Comprehensive property management solutions tailored to optimize your investments and preserve your asset value.",
+    "icon": "/assets/img/icons/serivce-page-iocn1.svg",
+    "slug": "property-management"
+  },
+  {
+    "id": "2",
+    "title": "Real Estate Consulting",
+    "description": "Expert advice on market trends, property acquisitions, tax structuring, and high-return development projects.",
+    "icon": "/assets/img/icons/serivce-page-iocn2.svg",
+    "slug": "real-estate-consultancy"
+  },
+  {
+    "id": "3",
+    "title": "Mortgage Advisory",
+    "description": "Navigating commercial and residential loans, refinance possibilities, and optimal financing terms with ease.",
+    "icon": "/assets/img/icons/serivce-page-iocn3.svg",
+    "slug": "mortgage-advisory"
+  },
+  {
+    "id": "4",
+    "title": "Rental & Leasing",
+    "description": "Connecting qualified tenants with premium residential and commercial spaces across European cities.",
+    "icon": "/assets/img/icons/serivce-page-iocn4.svg",
+    "slug": "rental-leasing"
+  },
+  {
+    "id": "5",
+    "title": "Architecture & Design",
+    "description": "Full-cycle interior and architectural concepts delivering high aesthetic value and modern functional spaces.",
+    "icon": "/assets/img/icons/serivce-page-iocn5.svg",
+    "slug": "architecture-design"
+  },
+  {
+    "id": "6",
+    "title": "Legal & Tax Advisory",
+    "description": "Full regulatory compliance, title inspection, contract negotiation, and cross-border settlement protections.",
+    "icon": "/assets/img/icons/serivce-page-iocn6.svg",
+    "slug": "legal-tax-advisory"
+  }
+]

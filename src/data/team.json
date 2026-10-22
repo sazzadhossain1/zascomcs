@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "name": "Ethan Brooks",
+    "role": "Founder & Managing Director",
+    "image": "/assets/img/image/team-page1.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Elena Rostova",
+    "role": "Head of Property Acquisition",
+    "image": "/assets/img/image/team-page2.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Marcus Vance",
+    "role": "Chief Investment Consultant",
+    "image": "/assets/img/image/team-page3.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Clara Chevalier",
+    "role": "Lead Architect & Designer",
+    "image": "/assets/img/image/team-page4.png",
+    "socials": {
+      "facebook": "#",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  }
+]

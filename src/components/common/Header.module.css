@@ -1,0 +1,574 @@
+/* ==========================================
+   ZASCOMCS RESPONSIVE HEADER
+   Layout and mobile visibility fixes
+========================================== */
+
+.desktopHeader {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
+.desktopHeaderArea {
+  width: 100%;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.headerElements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  gap: 24px;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.desktopNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.desktopNavigation > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktopNavigation > ul > li {
+  position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.desktopNavigation > ul > li > a {
+  white-space: nowrap;
+}
+
+.desktopActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.desktopActions a {
+  white-space: nowrap;
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ==========================================
+   MOBILE HEADER
+========================================== */
+
+.mobileHeader {
+  display: none;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff;
+}
+
+.mobileHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  gap: 16px;
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1998;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MOBILE DRAWER
+========================================== */
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(380px, 90vw);
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1999;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #202c4a;
+
+  visibility: hidden;
+  transform: translateX(105%);
+
+  transition:
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
+  box-shadow: -8px 0 25px rgba(0, 0, 0, 0.12);
+}
+
+.drawerOpen {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.drawerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #202c4a;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MOBILE NAVIGATION
+   ISOLATED FROM OLD TEMPLATE CSS
+========================================== */
+
+.mobileNavigation {
+  display: block;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 12px 20px;
+  background: #ffffff;
+}
+
+.mobileNavList {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileNavItem {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  list-style: none;
+}
+
+.mobileNavRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  gap: 8px;
+}
+
+/* FIX: Explicit visibility for menu text */
+
+.mobileDrawer .mobileNavLink,
+.mobileDrawer .mobileSubLink,
+.mobileDrawer .mobileNestedSubmenu a {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  padding: 12px 0;
+
+  color: #202c4a;
+  opacity: 1;
+  visibility: visible;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobileDrawer .mobileNavLink:hover,
+.mobileDrawer .mobileSubLink:hover,
+.mobileDrawer .mobileNestedSubmenu a:hover {
+  color: #0263e0;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #202c4a;
+  cursor: pointer;
+}
+
+/* ==========================================
+   MOBILE SUBMENU
+========================================== */
+
+.mobileSubmenu {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 8px 14px;
+  list-style: none;
+}
+
+.mobileSubmenu > li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileDrawer .mobileSubLink {
+  font-size: 14px;
+  padding: 11px 0;
+}
+
+.mobileNestedSubmenu {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 8px 14px;
+  list-style: none;
+}
+
+.mobileNestedSubmenu li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileDrawer .mobileNestedSubmenu a {
+  display: block;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+/* ==========================================
+   MEMBER LOGIN ONLY
+========================================== */
+
+.drawerActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 16px 20px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+.drawerActions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 45px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ==========================================
+   SMALL DESKTOP
+========================================== */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .headerElements {
+    gap: 14px;
+  }
+
+  .desktopNavigation > ul {
+    gap: 12px;
+  }
+
+  .desktopNavigation > ul > li > a {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   TABLET AND MOBILE
+========================================== */
+
+@media (max-width: 1199.98px) {
+  .desktopHeader {
+    display: none !important;
+  }
+
+  .mobileHeader {
+    display: block !important;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .mobileHeaderInner {
+    min-height: 76px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .mobileDrawer {
+    width: min(380px, 85vw);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+  .mobileHeaderInner {
+    min-height: 68px;
+    padding: 10px 16px;
+  }
+
+  .mobileDrawer {
+    width: min(360px, 90vw);
+  }
+
+  .drawerTop {
+    padding: 15px 16px;
+  }
+
+  .mobileNavigation {
+    padding: 10px 16px;
+  }
+
+  .drawerActions {
+    padding: 14px 16px 18px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 399.98px) {
+  .mobileHeaderInner {
+    min-height: 64px;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .menuToggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobileDrawer {
+    width: 92vw;
+  }
+
+  .drawerTop {
+    padding: 12px;
+  }
+
+  .mobileNavigation {
+    padding: 8px 12px;
+  }
+
+  .drawerActions {
+    padding: 12px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileDrawer {
+    transition: none;
+  }
+}
+
+/* Desktop Dropdown Width Fix */
+
+@media (min-width: 1200px) {
+  .desktopNavigation :global(.sub-menu) {
+    width: 320px !important;
+    min-width: 320px !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+
+  .desktopNavigation :global(.sub-menu > li > a) {
+    white-space: nowrap !important;
+  }
+}
+
+/* =================== */
+
+/* ZASCO Header Logo & Hero Overlap Fix */
+
+.desktopHeader {
+  position: relative;
+  z-index: 1000;
+}
+
+.desktopHeaderArea {
+  position: relative;
+  width: 100%;
+}
+
+.headerElements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.logoArea {
+  flex: 0 0 200px;
+  width: 200px;
+  max-width: 200px;
+}
+
+.logoArea img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.desktopNavigation {
+  flex: 1;
+  min-width: 0;
+}
+
+.desktopActions {
+  flex-shrink: 0;
+}
+
+@media (min-width: 1200px) {
+  .mobileHeader {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .desktopHeader {
+    display: none !important;
+  }
+
+  .mobileHeader {
+    display: block !important;
+    position: relative;
+    z-index: 1000;
+    background: #ffffff;
+  }
+
+  .mobileHeaderInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 76px;
+  }
+
+  .mobileHeaderInner img {
+    max-width: 165px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 575px) {
+  .mobileHeaderInner img {
+    max-width: 140px;
+  }
+}

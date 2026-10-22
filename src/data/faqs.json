@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "question": "How do I list my property on Avigo?",
+    "answer": "Listing your property is effortless. Simply create an account, click 'List Your Property' in the navigation bar, enter your property details, upload photos, and set your desired sale or lease terms. Our verification team reviews submissions within 24 hours."
+  },
+  {
+    "id": "2",
+    "question": "What documentation is required to purchase or lease?",
+    "answer": "Buyers typically require valid photo identification, proof of funds or mortgage pre-approval, and tax residence confirmation. For renters, employment verification and credit background checks are typically required by owners."
+  },
+  {
+    "id": "3",
+    "question": "Are there fees for searching and browsing properties?",
+    "answer": "No. Searching, filtering, and contacting agents or landlords on Avigo is completely free for prospective buyers and tenants."
+  },
+  {
+    "id": "4",
+    "question": "Can I arrange virtual or video walk-through tours?",
+    "answer": "Yes! Most listed properties feature 3D virtual tours and video walk-through options. You can also request a private live video consultation with the dedicated listing agent."
+  },
+  {
+    "id": "5",
+    "question": "How does Avigo ensure transaction security?",
+    "answer": "We collaborate with certified notaries, escrow accounts, and verified brokerage partners across Europe to protect both parties throughout deposit, inspection, and closing phases."
+  }
+]

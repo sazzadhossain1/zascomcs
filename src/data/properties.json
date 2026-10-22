@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Huzz Apartment",
+    "location": "3504 S Olive Avenue, West Palm Beach",
+    "price": "$1,095,000",
+    "beds": 5,
+    "baths": 2,
+    "sqft": 1500,
+    "image": "/assets/img/image/home2-liting-1.png",
+    "type": "Apartment",
+    "tag": "For Sale"
+  },
+  {
+    "id": "2",
+    "title": "Sunset Plaza",
+    "location": "3504 S Olive Avenue, West Palm Beach",
+    "price": "$899,000",
+    "beds": 5,
+    "baths": 2,
+    "sqft": 1500,
+    "image": "/assets/img/image/home2-liting-2.png",
+    "type": "Commercial",
+    "tag": "For Sale"
+  },
+  {
+    "id": "3",
+    "title": "Bradley Avenue",
+    "location": "3504 S Olive Avenue, West Palm Beach",
+    "price": "$629,900",
+    "beds": 5,
+    "baths": 2,
+    "sqft": 1500,
+    "image": "/assets/img/image/home2-liting-4.png",
+    "type": "Duplexes",
+    "tag": "For Rent"
+  },
+  {
+    "id": "4",
+    "title": "Olive Luxury Suites",
+    "location": "3504 S Olive Avenue, West Palm Beach",
+    "price": "$629,900",
+    "beds": 5,
+    "baths": 2,
+    "sqft": 1500,
+    "image": "/assets/img/image/home2-liting-3.png",
+    "type": "Houses",
+    "tag": "For Sale"
+  }
+]

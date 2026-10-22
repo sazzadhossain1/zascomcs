@@ -1,0 +1,361 @@
+/* ==========================================
+   ZASCO MCS FOOTER
+   Responsive Layout and Official Logo
+========================================== */
+
+/* FOOTER ROW */
+
+.footerRow {
+  row-gap: 35px;
+}
+
+/* ==========================================
+   OFFICIAL LOGO
+========================================== */
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  text-decoration: none;
+  line-height: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.9;
+}
+
+.footerLogo {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* ==========================================
+   SOCIAL MEDIA SECTION
+========================================== */
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.socialSection h3 {
+  margin-bottom: 18px;
+}
+
+.socialIcons {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Social icons horizontal alignment */
+
+.socialIcons .socialList {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Reset old list positioning */
+
+.socialIcons .socialList li {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  list-style: none !important;
+  float: none !important;
+}
+
+/* Preserve existing social icon theme */
+
+.socialIcons .socialList li a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Center icon */
+
+.socialIcons .socialList li a i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  line-height: 1;
+  text-align: center;
+}
+
+/* ==========================================
+   COPYRIGHT SECTION
+========================================== */
+
+.copyrightRow {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.copyrightRow > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
+
+  text-align: center;
+}
+
+.copyrightText {
+  display: block;
+  width: 100%;
+
+  margin: 0 !important;
+  padding: 0;
+
+  text-align: center !important;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1200px) {
+  .footerRow {
+    row-gap: 30px;
+  }
+
+  .logoLink {
+    width: 240px;
+  }
+
+  .socialSection {
+    align-items: flex-start;
+  }
+
+  .socialIcons .socialList {
+    justify-content: flex-start !important;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .footerRow {
+    row-gap: 35px;
+  }
+
+  .logoLink {
+    width: 220px;
+  }
+
+  .socialSection {
+    align-items: flex-start;
+  }
+
+  .socialIcons .socialList {
+    justify-content: flex-start !important;
+  }
+
+  .copyrightText {
+    text-align: center !important;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+  .footerRow {
+    row-gap: 30px;
+  }
+
+  .logoContainer {
+    justify-content: flex-start;
+  }
+
+  .logoLink {
+    width: 200px;
+  }
+
+  .socialSection {
+    align-items: flex-start;
+  }
+
+  .socialSection h3 {
+    margin-bottom: 15px;
+  }
+
+  .socialIcons .socialList {
+    justify-content: flex-start !important;
+    gap: 10px;
+  }
+
+  .copyrightRow {
+    margin-top: 15px;
+  }
+
+  .copyrightText {
+    font-size: 14px;
+    text-align: center !important;
+    line-height: 1.7;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 399.98px) {
+  .logoLink {
+    width: 180px;
+  }
+
+  .socialIcons .socialList {
+    gap: 8px;
+  }
+
+  .copyrightText {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+/* ==========================xxxxxxxxxxxxxx=============== */
+
+/* ==========================================
+   ZASCO MCS FOOTER
+   CONTACT ICON & TEXT ALIGNMENT FIX
+========================================== */
+
+/* Contact rows */
+.footerRow :global(.foonter-contact-1) {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  width: 100%;
+}
+
+/* Icon container */
+.footerRow :global(.foonter-contact-icon-1) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Inner icon wrapper */
+.footerRow :global(.foonter-contact-icon-1 > div) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon image */
+.footerRow :global(.foonter-contact-icon-1 img) {
+  display: block !important;
+  width: 20px;
+  height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Text container */
+.footerRow :global(.foonter-contact-p) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 1;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Text and links */
+.footerRow :global(.foonter-contact-p a),
+.footerRow :global(.foonter-contact-p span) {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.6 !important;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+  .footerRow :global(.foonter-contact-1) {
+    gap: 12px !important;
+  }
+
+  .footerRow :global(.foonter-contact-icon-1) {
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Top 10 Tips for Finding Your Dream Apartment in 2026",
+    "excerpt": "Discover essential strategies and expert advice for navigating competitive urban real estate markets without stress.",
+    "date": "Oct 12, 2026",
+    "author": "Alex Morgan",
+    "commentsCount": 3,
+    "image": "/assets/img/image/blog-page1.png",
+    "category": "Real Estate",
+    "slug": "tips-for-buying-your-dream-home"
+  },
+  {
+    "id": "2",
+    "title": "How Smart Home Technology is Changing Modern Property Value",
+    "excerpt": "Smart energy systems, automated security, and IoT devices are significantly increasing resale multiples.",
+    "date": "Oct 08, 2026",
+    "author": "Sarah Jenkins",
+    "commentsCount": 5,
+    "image": "/assets/img/image/blog-page2.png",
+    "category": "Technology",
+    "slug": "smart-home-technology-changing-property-value"
+  },
+  {
+    "id": "3",
+    "title": "Commercial Real Estate Forecast: Emerging European Markets",
+    "excerpt": "An in-depth look at emerging commercial hubs offering high yields and strong tenant demand across Central Europe.",
+    "date": "Sep 28, 2026",
+    "author": "David Vance",
+    "commentsCount": 2,
+    "image": "/assets/img/image/blog-page3.png",
+    "category": "Investment",
+    "slug": "commercial-real-estate-forecast-european-markets"
+  }
+]

@@ -1,0 +1,512 @@
+/* ==========================================
+   ZASCOMCS - UNDER UPDATE SECTION
+   HERO SECTION INSPIRED COLOR THEME
+   FULL RESPONSIVE
+========================================== */
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.uu-section {
+  --uu-navy: #202c4a;
+  --uu-blue: #0263e0;
+  --uu-accent: #2f80ed;
+  --uu-bg: #effaff;
+  --uu-white: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 70vh;
+  min-height: 70svh;
+
+  margin: 0;
+  padding: 100px 24px;
+
+  background: var(--uu-bg);
+  overflow: hidden;
+}
+
+/* ==========================================
+   BACKGROUND DECORATIONS
+========================================== */
+
+.uu-section::before,
+.uu-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.uu-section::before {
+  width: 420px;
+  height: 420px;
+
+  top: -180px;
+  left: -140px;
+
+  background: radial-gradient(
+    circle,
+    rgba(47, 128, 237, 0.15) 0%,
+    rgba(47, 128, 237, 0) 70%
+  );
+}
+
+.uu-section::after {
+  width: 500px;
+  height: 500px;
+
+  bottom: -230px;
+  right: -150px;
+
+  background: radial-gradient(
+    circle,
+    rgba(2, 99, 224, 0.12) 0%,
+    rgba(2, 99, 224, 0) 70%
+  );
+}
+
+/* Decorative shapes */
+
+.uu-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.uu-decoration-one {
+  width: 16px;
+  height: 16px;
+
+  top: 22%;
+  right: 17%;
+
+  border-radius: 4px;
+  background: var(--uu-accent);
+
+  transform: rotate(45deg);
+  opacity: 0.65;
+}
+
+.uu-decoration-two {
+  width: 12px;
+  height: 12px;
+
+  bottom: 22%;
+  left: 15%;
+
+  border-radius: 50%;
+  background: var(--uu-blue);
+
+  opacity: 0.45;
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.uu-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.uu-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+  padding: 70px 55px;
+
+  text-align: center;
+
+  background: var(--uu-white);
+
+  border: 1px solid rgba(2, 99, 224, 0.1);
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 50px rgba(32, 44, 74, 0.06),
+    0 4px 15px rgba(32, 44, 74, 0.03);
+
+  overflow: hidden;
+}
+
+/* Blue top accent */
+
+.uu-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 100%;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(90deg, var(--uu-blue), var(--uu-accent));
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.uu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 84px;
+  height: 84px;
+
+  margin: 0 auto 28px;
+
+  border-radius: 50%;
+
+  background: rgba(47, 128, 237, 0.1);
+  border: 1px solid rgba(47, 128, 237, 0.2);
+
+  color: var(--uu-blue);
+}
+
+.uu-icon svg {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  animation: uu-spin 12s linear infinite;
+}
+
+/* ==========================================
+   MAINTENANCE BADGE
+========================================== */
+
+.uu-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-bottom: 24px;
+  padding: 9px 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--uu-blue);
+
+  background: rgba(47, 128, 237, 0.08);
+  border: 1px solid rgba(47, 128, 237, 0.16);
+  border-radius: 999px;
+}
+
+/* Small status dot */
+
+.uu-status-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  background: var(--uu-blue);
+
+  box-shadow: 0 0 0 4px rgba(2, 99, 224, 0.1);
+}
+
+/* ==========================================
+   MAIN TITLE
+========================================== */
+
+.uu-title {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0 auto 20px;
+
+  font-family: inherit;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+
+  color: var(--uu-navy);
+
+  overflow-wrap: break-word;
+}
+
+.uu-highlight {
+  color: var(--uu-blue);
+}
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.uu-sub {
+  margin: 0;
+
+  font-family: inherit;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 500;
+  line-height: 1.5;
+
+  letter-spacing: 0.3px;
+
+  color: #526583;
+}
+
+/* ==========================================
+   ANIMATED PROGRESS BAR
+========================================== */
+
+.uu-bar {
+  position: relative;
+
+  width: 180px;
+  max-width: 100%;
+  height: 5px;
+
+  margin: 34px auto 0;
+
+  border-radius: 999px;
+
+  background: rgba(2, 99, 224, 0.12);
+
+  overflow: hidden;
+}
+
+.uu-bar span {
+  display: block;
+
+  width: 40%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, var(--uu-blue), var(--uu-accent));
+
+  animation: uu-slide 1.8s ease-in-out infinite;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes uu-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes uu-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1400px) {
+  .uu-section {
+    padding: 120px 30px;
+  }
+
+  .uu-card {
+    padding: 85px 65px;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .uu-section {
+    padding: 90px 24px;
+  }
+
+  .uu-card {
+    padding: 65px 50px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .uu-section {
+    min-height: 65svh;
+    padding: 75px 24px;
+  }
+
+  .uu-card {
+    max-width: 680px;
+    padding: 60px 45px;
+  }
+
+  .uu-title {
+    font-size: 40px;
+  }
+
+  .uu-decoration-one {
+    right: 8%;
+  }
+
+  .uu-decoration-two {
+    left: 8%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767.98px) {
+  .uu-section {
+    min-height: 60svh;
+    padding: 65px 18px;
+  }
+
+  .uu-card {
+    padding: 50px 28px;
+    border-radius: 20px;
+  }
+
+  .uu-icon {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+  }
+
+  .uu-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .uu-badge {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+  }
+
+  .uu-title {
+    font-size: clamp(28px, 6vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+  }
+
+  .uu-sub {
+    font-size: 19px;
+  }
+
+  .uu-bar {
+    width: 150px;
+    margin-top: 28px;
+  }
+
+  .uu-decoration-one,
+  .uu-decoration-two {
+    opacity: 0.25;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 399.98px) {
+  .uu-section {
+    padding: 45px 14px;
+  }
+
+  .uu-card {
+    padding: 42px 20px;
+    border-radius: 16px;
+  }
+
+  .uu-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .uu-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .uu-badge {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .uu-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .uu-sub {
+    font-size: 18px;
+  }
+
+  .uu-bar {
+    width: 135px;
+    margin-top: 25px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .uu-icon svg,
+  .uu-bar span {
+    animation: none;
+  }
+}
