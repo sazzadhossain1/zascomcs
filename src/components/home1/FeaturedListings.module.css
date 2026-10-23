@@ -1,6 +1,7 @@
 /* ========================================
    ZASCO MCS MEMBERSHIP BENEFITS
-   BLUE / NAVY / WHITE THEME
+   PROFESSIONAL 3D FLIP CARDS
+   ORIGINAL BLUE / NAVY / WHITE THEME
 ======================================== */
 
 .benefitsSection {
@@ -11,9 +12,7 @@
   overflow: hidden;
 }
 
-/* ========================================
-   LANGUAGE SECTION
-======================================== */
+/* LANGUAGE SECTIONS */
 
 .languageSection {
   width: 100%;
@@ -25,10 +24,7 @@
   border-top: 1px solid #dce8f8;
 }
 
-/* ========================================
-   ORIGINAL TITLE DESIGN
-   KEEP GREEN BRUSH UNCHANGED
-======================================== */
+/* SECTION HEADINGS */
 
 .sectionHeading {
   width: 100%;
@@ -43,57 +39,112 @@
   line-height: 1.45;
 }
 
-/*
-  IMPORTANT:
-  Original .after class is preserved.
-  No background/color override is applied.
-*/
+/* Keep original global .after styling untouched */
 
-/* ========================================
-   BENEFITS GRID
-======================================== */
+/* BENEFITS GRID */
 
 .benefitsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   width: 100%;
+  align-items: stretch;
 }
 
-/* ========================================
-   BENEFIT CARD
-======================================== */
+/* FLIP CONTAINER */
+
+.flipContainer {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 260px;
+  perspective: 1200px;
+}
+
+/* MAIN CARD */
 
 .benefitCard {
   position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* HOVER AND CLICK FLIP */
+
+@media (hover: hover) and (pointer: fine) {
+  .benefitCard:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+
+  .benefitCard:hover {
+    transform: translateY(-6px);
+  }
+}
+
+.isFlipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT AND BACK SHARED STYLES */
+
+.cardFace {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 18px;
+  border: 1px solid #dce8f8;
+
+  overflow: hidden;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  box-shadow: 0 8px 28px rgba(32, 44, 74, 0.05);
+}
+
+/* FRONT SIDE */
+
+.cardFront {
+  appearance: none;
+  -webkit-appearance: none;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  min-height: 225px;
-  padding: 35px 25px;
+  padding: 30px 25px 38px;
 
   background: #ffffff;
-  border: 1px solid #dce8f8;
-  border-radius: 18px;
+  color: #202c4a;
 
   text-align: center;
-  overflow: hidden;
-
-  box-shadow: 0 8px 28px rgba(32, 44, 74, 0.05);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-/* Decorative circle */
-.benefitCard::before {
+/* DECORATIVE CIRCLE */
+
+.cardFront::before {
   content: "";
+
   position: absolute;
 
   width: 150px;
@@ -108,19 +159,7 @@
   pointer-events: none;
 }
 
-/* Hover */
-.benefitCard:hover {
-  transform: translateY(-7px);
-
-  background: #edf5ff;
-  border-color: #9dc6ff;
-
-  box-shadow: 0 18px 40px rgba(2, 99, 224, 0.12);
-}
-
-/* ========================================
-   ICON BOX
-======================================== */
+/* ICON BOX */
 
 .iconWrapper {
   position: relative;
@@ -128,6 +167,8 @@
 
   width: 70px;
   height: 70px;
+
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
@@ -138,7 +179,7 @@
 
   border-radius: 18px;
 
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   box-shadow: 0 6px 20px rgba(2, 99, 224, 0.07);
 
@@ -155,15 +196,7 @@
   display: inline-block;
 }
 
-.benefitCard:hover .iconWrapper {
-  background: #0263e0;
-  color: #ffffff;
-  transform: scale(1.08);
-}
-
-/* ========================================
-   CARD TITLE
-======================================== */
+/* FRONT TITLE */
 
 .benefitTitle {
   position: relative;
@@ -181,9 +214,7 @@
   overflow-wrap: break-word;
 }
 
-/* ========================================
-   BOTTOM ACCENT
-======================================== */
+/* BOTTOM BLUE ACCENT */
 
 .cardDecoration {
   position: absolute;
@@ -202,13 +233,208 @@
   transition: width 0.3s ease;
 }
 
-.benefitCard:hover .cardDecoration {
-  width: 110px;
+/* FLIP HINT */
+
+.flipHint {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  white-space: nowrap;
+
+  color: #0263e0;
+  font-size: 12px;
+  font-weight: 600;
+
+  opacity: 0.65;
+
+  transition: opacity 0.3s ease;
 }
 
-/* ========================================
-   MOTTO
-======================================== */
+.flipHint i {
+  font-size: 11px;
+}
+
+/* FRONT HOVER EFFECTS */
+
+@media (hover: hover) and (pointer: fine) {
+  .benefitCard:hover .iconWrapper {
+    background: #0263e0;
+    color: #ffffff;
+    transform: scale(1.06);
+  }
+
+  .benefitCard:hover .cardDecoration {
+    width: 110px;
+  }
+
+  .benefitCard:hover .flipHint {
+    opacity: 1;
+  }
+}
+
+/* BACK SIDE */
+
+.cardBack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  padding: 22px 24px 18px;
+
+  background: linear-gradient(145deg, #ffffff 0%, #edf5ff 100%);
+
+  transform: rotateY(180deg);
+
+  text-align: left;
+}
+
+/* BACK HEADER */
+
+.backHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dce8f8;
+}
+
+.backIcon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf3ff;
+  color: #0263e0;
+
+  border-radius: 12px;
+}
+
+.backIcon i {
+  font-size: 18px;
+}
+
+.backTitle {
+  color: #202c4a;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 0;
+
+  overflow-wrap: anywhere;
+}
+
+/* SCROLLABLE DESCRIPTION */
+
+.backContent {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 14px 6px 10px 0;
+
+  scrollbar-width: thin;
+  scrollbar-color: #9dc6ff transparent;
+}
+
+.backContent::-webkit-scrollbar {
+  width: 5px;
+}
+
+.backContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.backContent::-webkit-scrollbar-thumb {
+  background: #9dc6ff;
+  border-radius: 10px;
+}
+
+.backContent p {
+  color: #4c5873;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+
+  margin: 0;
+
+  overflow-wrap: anywhere;
+}
+
+/* BACK BUTTON */
+
+.flipBackButton {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  align-self: flex-start;
+  flex-shrink: 0;
+
+  margin-top: 8px;
+  padding: 7px 13px;
+
+  border: 1px solid #d0e3ff;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #0263e0;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.flipBackButton:hover {
+  background: #0263e0;
+  color: #ffffff;
+  border-color: #0263e0;
+}
+
+.flipBackButton i {
+  font-size: 11px;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+.cardFront:focus-visible,
+.flipBackButton:focus-visible {
+  outline: 3px solid #0263e0;
+  outline-offset: -4px;
+}
+
+/* MOTTO - ORIGINAL DESIGN */
 
 .motto {
   width: 100%;
@@ -217,9 +443,10 @@
   margin: 45px auto 0;
   padding: 30px 35px;
 
-  background: linear-gradient(135deg, #202c4a 0%, #151e35 100%);
+  /* background: linear-gradient(135deg, #202c4a 0%, #151e35 100%); */
 
   border-left: 4px solid #0263e0;
+  border-right: 4px solid #0263e0;
   border-radius: 14px;
 
   text-align: center;
@@ -228,7 +455,8 @@
 }
 
 .motto p {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: black;
 
   font-size: 21px;
   font-weight: 600;
@@ -238,9 +466,7 @@
   margin: 0;
 }
 
-/* ========================================
-   BANGLA TYPOGRAPHY
-======================================== */
+/* BANGLA TYPOGRAPHY */
 
 .banglaSection .sectionHeading h1 {
   line-height: 1.7;
@@ -251,14 +477,27 @@
   line-height: 1.8;
 }
 
+.banglaSection .backTitle {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.banglaSection .backContent p {
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.banglaSection .flipHint,
+.banglaSection .flipBackButton {
+  font-size: 13px;
+}
+
 .banglaSection .motto p {
   font-size: 21px;
   line-height: 1.9;
 }
 
-/* ========================================
-   TABLET
-======================================== */
+/* TABLET */
 
 @media (max-width: 991px) {
   .benefitsSection {
@@ -267,7 +506,6 @@
 
   .benefitsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     gap: 20px;
   }
 
@@ -275,9 +513,8 @@
     margin-bottom: 45px;
   }
 
-  .benefitCard {
-    min-height: 210px;
-    padding: 30px 20px;
+  .flipContainer {
+    height: 255px;
   }
 
   .benefitTitle {
@@ -298,9 +535,7 @@
   }
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* MOBILE */
 
 @media (max-width: 575px) {
   .benefitsSection {
@@ -321,11 +556,16 @@
     gap: 16px;
   }
 
-  .benefitCard {
-    min-height: 175px;
-    padding: 28px 20px;
+  .flipContainer {
+    height: 235px;
+  }
 
+  .cardFace {
     border-radius: 14px;
+  }
+
+  .cardFront {
+    padding: 25px 20px 35px;
   }
 
   .iconWrapper {
@@ -344,6 +584,15 @@
     font-size: 18px;
   }
 
+  .cardBack {
+    padding: 18px 20px 15px;
+  }
+
+  .backContent p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
   .banglaSection {
     margin-top: 50px;
     padding-top: 50px;
@@ -355,6 +604,11 @@
 
   .banglaSection .benefitTitle {
     font-size: 20px;
+  }
+
+  .banglaSection .backContent p {
+    font-size: 14px;
+    line-height: 1.8;
   }
 
   .motto {
@@ -373,9 +627,7 @@
   }
 }
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* SMALL MOBILE */
 
 @media (max-width: 375px) {
   .sectionHeading h1 {
@@ -386,12 +638,20 @@
     font-size: 23px;
   }
 
-  .benefitCard {
-    min-height: 165px;
+  .flipContainer {
+    height: 245px;
   }
 
   .benefitTitle {
     font-size: 17px;
+  }
+
+  .backTitle {
+    font-size: 14px;
+  }
+
+  .banglaSection .backTitle {
+    font-size: 15px;
   }
 
   .motto p {
@@ -399,14 +659,15 @@
   }
 }
 
-/* ========================================
-   ACCESSIBILITY
-======================================== */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
+  .cardInner,
   .benefitCard,
   .iconWrapper,
-  .cardDecoration {
+  .cardDecoration,
+  .flipHint,
+  .flipBackButton {
     transition: none;
   }
 }
