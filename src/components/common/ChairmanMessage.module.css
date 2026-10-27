@@ -46,7 +46,7 @@
 .profile {
   display: grid;
   grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
-  gap: 55px;
+  gap: 15px;
   align-items: start;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .identity {
-  margin-top: 22px;
+  margin-top: 15px;
   padding: 24px 18px;
   text-align: center;
   background: #f4f8ff;
